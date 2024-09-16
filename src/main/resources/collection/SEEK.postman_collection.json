@@ -1,0 +1,101 @@
+{
+	"info": {
+		"_postman_id": "30c77fe9-765b-4e99-9103-4cb043039083",
+		"name": "SEEK",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "1047988"
+	},
+	"item": [
+		{
+			"name": "SiGeCan",
+			"item": [
+				{
+					"name": "local",
+					"item": [
+						{
+							"name": "getAllCandidates",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/SigeCan/v1/candidate/findAll",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"SigeCan",
+										"v1",
+										"candidate",
+										"findAll"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getApplicantById",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"jobId\":\"1\",\r\n    \"firstName\":\"Carlos2\",\r\n    \"lastName\":\"Santana2 Cruz\",\r\n    \"email\":\"carlos.santana2@gmail.com\",\r\n    \"phoneNumber\":\"912332211\",\r\n    \"profileUrl1\":\"www.linkedin.com/carlosSantana2\",\r\n    \"summary\":\"Profesional ipsum loren\",\r\n    \"gender\":\"M\",\r\n    \"salaryExpected\":\"3501.00\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/SigeCan/v1/candidate/registerApplicant",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"SigeCan",
+										"v1",
+										"candidate",
+										"registerApplicant"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "DropApplicant",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/SigeCan/v1/candidate/dropApplicant/6",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"SigeCan",
+										"v1",
+										"candidate",
+										"dropApplicant",
+										"6"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getToken",
+							"request": {
+								"method": "POST",
+								"header": []
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	]
+}
