@@ -34,7 +34,7 @@ public class SigecanJwtSecurityFilterChainConfig {
     this.sigecanJwtProperties = sigecanJwtProperties;
   }
 
-  @Bean("jwtSecurityFilterChain")
+  @Bean
   @ConditionalOnProperty(
       prefix = "app.web.security.jwt",
       name = "enable",
