@@ -16,6 +16,8 @@ spring:
     properties:
       hibernate:
         dialect: org.hibernate.dialect.MySQLDialect
+  flyway:
+    baseline-on-migrate: true
 ## 2. APPLICATION SETTINGS
 app:
   web:

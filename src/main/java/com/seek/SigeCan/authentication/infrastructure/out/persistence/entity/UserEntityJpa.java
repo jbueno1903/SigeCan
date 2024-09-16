@@ -1,6 +1,7 @@
 package com.seek.SigeCan.authentication.infrastructure.out.persistence.entity;
 
 import jakarta.persistence.*;
+import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
@@ -9,6 +10,7 @@ import lombok.ToString;
 @Setter
 @Entity
 @ToString
+@Data
 @Table(name = "user")
 public class UserEntityJpa {
     @Id
