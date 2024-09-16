@@ -1,0 +1,31 @@
+server:
+  port: ${SERVER_PORT:8080}
+  servlet:
+    context-path: /SigeCan/v1/
+spring:
+  application:
+    name: SigeCan
+  datasource:
+    url: jdbc:mysql://${MYSQL_HOST:localhost}:${MYSQL_PORT:3306}/${MYSQL_BD:sigecan}
+    username: ${MYSQL_USER:dev_seek}
+    password: ${MYSQL_PASSWORD:dev@2024}
+  jpa:
+    hibernate:
+      ddl-auto: none
+    show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect
+## 2. APPLICATION SETTINGS
+app:
+  web:
+    messages:
+      property-files: business-messages
+    security:
+      jwt:
+        enable: ${SECURITY_API_LEVEL_ENABLED:true}
+        base64Secret: '${JWT_BASE64_SECRET_KEY:EpvZNqUROVAJFM3pWj8Rscfem7YfuoJ3V59ud+INim3yIpnoYpk8GEB0t5+Ux93kBEqnguDzCuXUrcz1K/kUJw==}'
+        tokenValidityInSeconds: 360000 #original 9000
+        refreshTokenValidityInSeconds: 9300
+        dynamic-paths-excluded:
+          - /authentication/token
